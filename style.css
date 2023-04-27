@@ -1,8 +1,36 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .page {
     width: 80%;
+    margin: 0 auto;
     border: 1px solid rebeccapurple;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+nav .logo {
+    max-width: 100%;
+}
+
+nav a {
+    flex: 1 300px;
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+    line-height: 3;
+    color: black;
+    margin-right: 20px;
+}
+
+nav a:last-of-type {
+    margin-right: 0;
 }
