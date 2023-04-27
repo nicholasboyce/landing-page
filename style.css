@@ -4,33 +4,47 @@
     padding: 0;
 }
 
-.page {
-    width: 80%;
-    margin: 0 auto;
-    border: 1px solid rebeccapurple;
+:root {
+    --columnPadding: 16px;
+    --layoutWidth: 1000px;
 }
+
+/* || Header and Navigation Styles */
 
 header {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
+    background-color: hsl(215, 28%, 17%);
 }
 
-nav .logo {
-    max-width: 100%;
+.header-container {
+    display: flex;
+    align-items: center;
+    max-width: var(--layoutWidth);
+    margin: 0 auto;
+    padding: 0 var(--columnPadding);
+    justify-content: space-between;
+}
+
+.logo {
+    color: hsl(0, 0%, 100%);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
 }
 
 nav a {
-    flex: 1 300px;
+    padding: 10px 10px;
     text-decoration: none;
     outline: none;
     text-align: center;
     line-height: 3;
-    color: black;
-    margin-right: 20px;
+    color: hsl(0, 0%, 100%);
 }
 
 nav a:last-of-type {
-    margin-right: 0;
+    padding-inline-end: 0;
 }
+
+/* || Main Body Styles */
