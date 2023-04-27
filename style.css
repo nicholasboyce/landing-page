@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    width: 80%;
+    border: 1px solid rebeccapurple;
+}
