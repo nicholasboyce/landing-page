@@ -1,6 +1,29 @@
 @font-face {
     font-family: Roboto;
-    src: url(fonts/roboto-fontfacekit/web\fonts/roboto_light_macroman/Roboto-Light-webfont.woff) format(.woff);
+    src: url(Roboto-Regular-webfont.woff) format('woff');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto-ThinItalic-webfont.woff) format('woff');
+    font-style: italic;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto-Bold-webfont.woff) format('woff');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Light-webfont.woff') format('woff');
+    font-style: normal;
+    font-weight: 300;
 }
 
 * {
@@ -9,12 +32,48 @@
     padding: 0;
 }
 
+body {
+    min-height: 100vh;
+}
+
 html {
     font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 300;
 }
 :root {
     --columnPadding: 16px;
     --layoutWidth: 1000px;
+}
+
+.first h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.1;
+}
+
+header li, 
+.first p {
+    font-size: 1.125rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+}
+
+.second h2 {
+    font-size: 2.25rem;
+}
+
+.third blockquote {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.third p {
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 /* || Header and Navigation Styles */
@@ -43,7 +102,7 @@ nav ul {
 }
 
 nav a {
-    padding: 10px 10px;
+    padding: .625rem 1rem;
     text-decoration: none;
     outline: none;
     text-align: center;
@@ -63,7 +122,7 @@ nav a:last-of-type {
 }
 
 .second {
-    background-color: ;
+    background-color: hsl(0, 0%, 100%);
 }
 
 .third {
@@ -71,7 +130,7 @@ nav a:last-of-type {
 }
 
 .fourth {
-    background-color: ;
+    background-color: hsl(0, 0%, 100%);
 }
 
 footer {
@@ -82,7 +141,7 @@ footer {
 }
 
 section {
-    min-height: 300px;
+    min-height: 400px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -99,6 +158,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 20px;
 }
 
 .section-container > * {
@@ -116,11 +176,20 @@ section {
     padding-right: 10px;
 }
 
+.text-container-button {
+    text-decoration: none;
+    background-color: hsl(217, 91%, 59%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
 main .first img {
     background-color: hsl(220, 13%, 50%);
     text-align: center;
     display: inline-block;
-    padding: 60px;
+    padding: 100px 60px;
 }
 
 /* || Second Section */
@@ -155,10 +224,36 @@ main .first img {
 
 /* || Third Section */
 .quote-container {
-    flex: .8;
+    flex: .77;
     margin: 0 auto;
 }
 
 .quote-container p {
     text-align: end;
+    margin-right: 10px;
+}
+
+/* || Fourth Section */
+.call-to-action {
+    background-color: hsl(217, 91%, 59%);
+    color: hsl(0, 0%, 100%);
+    padding: 60px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.call-to-action-button {
+    color: inherit;
+    text-decoration: none;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: 7px 20px;
+}
+
+.call-to-action-button:hover {
+    background-color: hsl(217, 91%, 70%);
 }
